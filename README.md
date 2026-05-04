@@ -48,11 +48,11 @@
 
 ## 快速链接
 
-gitee下载地址：[https://gitee.com/mase20030409/policyanalyse]
+gitee下载地址：(https://gitee.com/mase20030409/POLICYanalyse)
 
-github下载地址：[https://github.com/mase20030409/policyanalyse]
+github下载地址：(https://github.com/mase2003/POLICYanalyse/)
 
-gitcode下载地址：[https://gitcode.com/mase20030409/policyanalyse]
+gitcode下载地址：[https://gitcode.com/mase20030409/POLICYanalyse]
 
 试用地址(支持电脑/ipad/平板访问，页面自适应良好):[http://47.94.17.204/policy/neo4j]
 
