@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --text-main: #2d1a17;
+  --text-reactive: #637072;
+  --page-bg: #f9f6f5;
+  --control-bg: #f7f6f1;
+  --control-border: #e2e1d8;
+  --container-bg: #f9f6f5;
+  --container-border: rgb(239, 232, 230);
+  --topbar-bg: #e7d7bd;
+  --menu-bg: #f9f6f5;
+  --menu-hover-bg: #b67162;
+  --menu-hover-text: #473734;
+  --menu-selected-bg: #843f32;
+  --btn-default-bg: #4F6F52;
+  --thead-bg: #9caf9e;
+  --thead-text: #f5f9f5;
+  --col-1: #ebf1ec;
+  --col-2: #ebf1ec;
+  --col-3: #ebf1ec;
+  --col-4: #ebf1ec;
+  --col-5: #ebf1ec;
+  --col-6: #ebf1ec;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  color: var(--text-main);
+  background: var(--page-bg);
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--page-bg);
+}
+
+.panel,
+.cell,
+.table-wrap,
+.toolbar,
+.topics-block,
+.list-wrap,
+.result-modal,
+.unlock-card {
+  background: var(--container-bg) !important;
+  border-color: var(--container-border) !important;
+}
+
+.page-title,
+h3,
+h4 {
+  color: var(--text-main);
+}
+
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-input-number,
+.ant-picker,
+.ant-select-selector,
+.ant-input-textarea,
+.ant-input-outlined,
+.ant-input-affix-wrapper-outlined,
+.ant-select-outlined .ant-select-selector {
+  background: var(--control-bg) !important;
+  border-color: var(--control-border) !important;
+  color: var(--text-main) !important;
+}
+
+.ant-input:focus,
+.ant-input-affix-wrapper-focused,
+.ant-select-focused .ant-select-selector,
+.ant-picker-focused {
+  border-color: #9d584a !important;
+  box-shadow: 0 0 0 2px rgba(157, 88, 74, 0.15) !important;
+}
+
+.ant-btn {
+  border-radius: 8px;
+}
+
+.ant-btn-primary {
+  background: #715652 !important;
+  border-color: #563d38 !important;
+  color: #f7f6f1 !important;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background: #2d1a17 !important;
+  border-color: #2d1a17 !important;
+}
+
+.ant-btn-default {
+  background: var(--btn-default-bg) !important;
+  border-color: var(--btn-default-bg) !important;
+  color: #f7f6f1 !important;
+}
+
+.ant-btn-default:hover,
+.ant-btn-default:focus {
+  background: #253525 !important;
+  border-color: #253525 !important;
+  color: #f7f6f1 !important;
+}
+
+.ant-btn-dangerous,
+.ant-btn-dangerous.ant-btn-primary {
+  background: #843f32 !important;
+  border-color: #843f32 !important;
+  color: #f8f3f1 !important;
+}
+
+.ant-table-wrapper .ant-table-thead > tr > th {
+  background: var(--thead-bg) !important;
+  color: var(--thead-text) !important;
+  border-bottom-color: var(--container-border) !important;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td {
+  border-bottom-color: var(--container-border) !important;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td:nth-child(6n + 1) {
+  background: var(--col-1) !important;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td:nth-child(6n + 2) {
+  background: var(--col-2) !important;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td:nth-child(6n + 3) {
+  background: var(--col-3) !important;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td:nth-child(6n + 4) {
+  background: var(--col-4) !important;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td:nth-child(6n + 5) {
+  background: var(--col-5) !important;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td:nth-child(6n) {
+  background: var(--col-6) !important;
+}
+
+.app-root,
+.layout,
+.content,
+.app-router {
+  background: var(--page-bg) !important;
+}
+
+.top-bar {
+  background: var(--topbar-bg) !important;
+  border-bottom-color: var(--control-border) !important;
+}
+
+.sidebar {
+  background: var(--menu-bg) !important;
+}
+
+/* 指定页面容器统一底色和边框 */
+.catalog,
+.kg-page,
+.panel {
+  background: var(--container-bg) !important;
+  border-color: var(--container-border) !important;
+}
+
+/* 三个解析页面反应色 */
+.panel :deep(.hit),
+.panel .hit {
+  color: #3e2723 !important;
+}
+
+/* 让 collapse 打开后表格贴合容器 */
+.ant-collapse-content-box {
+  padding: 0 !important;
+}
+.ant-collapse-content-box .ant-table-wrapper {
+  margin: 0 !important;
+}

@@ -1,0 +1,21 @@
+
+
+# 本仓库 Flask（Neo4j 等接口），浏览器请求为 http://域名/api/...
+location /api/ {
+    proxy_pass 本机后端代理地址;
+    proxy_http_version 1.1;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_connect_timeout 60s;
+    proxy_read_timeout 300s;
+    proxy_send_timeout 300s;
+    proxy_buffering off;
+}
+
+# 仅跳转，不要写 root / try_files（会与 return 冲突，且 duplicate location）
+location = /policy {
+    return 302 /policy/;
+}
+
